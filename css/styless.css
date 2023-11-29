@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display:flex;
+    justify-content: center;
+    min-height: 100vh;
+    background: url("/img/fondo.jpg");
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.section__inicio{
+    width: 420px;
+    color: #fff;
+    height: auto;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 10px;
+    padding: 30px 40px;
+}
+#section__titulo{
+    text-align: center;
+    padding: 15px;
+    font-size: 50px;
+}
+.section__inicio .section__input{
+    position: relative;
+    width: 100%;
+    height:50px;
+    margin: 30px 0;
+}
+
+.section__input input{
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+}
+.section__input input::placeholder{
+    color: #ffff;
+}
+.section__input i{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+.section__botones button{
+    cursor: pointer;
+    font-size: 16px;
+    height: 50px;
+    width: 120px;
+    border-radius: 50px;
+    border: 1px solid grey;
+}
+.section__botones--ing{
+    background-color: rgb(36, 83, 114);
+    color: white;
+}
+
+.section__botones--ing:hover{
+    background-color: blue;
+}
+.section__botones--limpiar:hover{
+    background-color: rgb(207, 205, 205);
+}
+.warnings{
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    color: rgb(247, 241, 241);
+    padding: 20px 20px;
+}

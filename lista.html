@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Listado de Productos</title>
+  <link rel="stylesheet" href="/css/styless2.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="header">Listado de Productos</header>
+  <main class="main">
+    <table id="main__tabla">
+      <tr>
+        <th>Nombre</th>
+        <th>Categoría</th>
+        <th>Marca</th>
+        <th>Precio</th>
+        <th>Procesador</th>
+        <th>Acción</th>
+      </tr>
+      <tbody id="main__tabla--body">
+      </tbody>
+    </table>
+    <section class="section__botones">
+      <button id="section__botones--atras">ATRAS</button>
+      <span id="pagina__actual">Página 1</span>
+      <button id="section__botones--siguiente">SIGUIENTE</button>
+    </section>
+  </main>
+
+  <aside class="aside">
+    <h3>Filtros</h3>
+    <p>Seleccione los filtros a aplicar:</p>
+    <br>
+    <h4>Categoria</h4>
+    <p>Seleccione la categoria a filtrar:</p>
+    <section class="aside__filtro">
+      <select name="" class="aside__select" id="aside__select--1">
+        <option value="Motherboard">Motherboard</option>
+        <option value="PC Gamer">PC Gamer</option>
+        <option value="Portatil">Portatil</option>
+        <option value="Memoria RAM">Memoria RAM</option>
+        <option value="Procesador">Procesador</option>
+        <option value="Celular">Celular</option>
+        <option value="Disco Duro">Disco Duro</option>
+        <option value="Tarjeta Grafica">Tarjeta Grafica</option>
+      </select>
+    </section>
+    <h4>Marca</h4>
+    <p>Seleccione el siguiente filtro:</p>
+    <section class="aside__filtro">
+      <select name="" class="aside__select" id="aside__select--2">
+      </select>
+    </section>
+    <button class="aside__btn aside__btn--aplicar" id="aside__btn--aplicar">APLICAR</button>
+    <button class="aside__btn aside__btn--borrar" id="aside__btn--borrar">LIMPIAR</button>
+  </aside>
+
+  <section class="modal hidden" id="modalProducto">
+    <div class="modal__contenedor"> 
+      <img src="" id="imagen__producto">  
+      <div class="modal__contenido">
+        <label for="">Nombre:</label>
+        <input type="text" id="nombre__producto">
+        <label for="">Categoria:</label>
+        <input type="text" id="categoria__producto">
+        <label for="">Marca:</label>
+        <input type="text" id="marca__producto">
+        <label for="">Precio:</label>
+        <input type="text" id="precio__producto">
+        <label for="">RAM:</label>
+        <input type="text" id="ram__producto">
+        <label for="">Garantia:</label>
+        <input type="text" id="garantia__producto">
+        <label for="">Procesador:</label>
+        <input type="text" id="procesador__producto">
+        <label for="">Almacenamiento:</label>
+        <input type="text" id="almacenamiento__producto">
+        <label for="">Año:</label>
+        <input type="text" id="año__producto">
+        <button id="modal__btn--actualizar">Actualizar</button>
+        <button id="modal__btn--regresar">Regresar</button>
+      </div>
+    </div>
+    <script src="js/principal.js" type="text/javascript"></script>
+</body>
+
+</html>
