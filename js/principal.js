@@ -144,8 +144,9 @@ document.getElementById("aside__btn--borrar").addEventListener("click", function
 function irAtras() {
     if (paginaActual > 0) {
         paginaActual--;
-        verTabla(productos);
+        verTabla(productos);    
         mostrarSubindice();
+        actualizarBotonesPaginacion();
     }
 }
 
@@ -155,24 +156,17 @@ function irAdelante() {
         paginaActual++;
         verTabla(productos);
         mostrarSubindice();
+        actualizarBotonesPaginacion();
     }
 }
-document.getElementById("section__botones--atras").addEventListener("click", irAtras);
-document.getElementById("section__botones--siguiente").addEventListener("click", irAdelante);
 
-function actualizarBotonesPaginacion() {
-    const totalPaginas = Math.ceil(productos.length / productosMostrados);
-    const btnAnterior = document.getElementById("section__botones--atras");
-    const btnSiguiente = document.getElementById("section__botones--siguiente");
 
-    btnAnterior.disabled = paginaActual === 0;
-    btnSiguiente.disabled = paginaActual === totalPaginas - 1;
 
-}
+
 function mostrarSubindice() {
     const totalPaginas = Math.ceil(productos.length / productosMostrados);
     const subindice = document.getElementById("pagina__actual");
-    subindice.textContent = `Pagina ${paginaActual + 1} de ${totalPaginas}`;
+    subindice.textContent = `Pagina ${paginaActual + 1}`;
 }
 
 function mostrarDetalle(idProducto, productA) {
@@ -265,3 +259,22 @@ function actualizar() {
     });
 }
 document.getElementById("modal__btn--actualizar").addEventListener("click", actualizar);
+
+function actualizarBotonesPaginacion() {
+    const totalPaginas = Math.ceil(productos.length / productosMostrados) - 1;
+    const btnAnterior = document.getElementById("section__botones--atras");
+    const btnSiguiente = document.getElementById("section__botones--siguiente");
+    if (paginaActual === 0)
+        btnAnterior.disabled = true;
+    else 
+        btnAnterior.disabled= false;   
+
+    if (paginaActual === totalPaginas)       
+        btnSiguiente.disabled = true;
+    else   
+        btnSiguiente.disabled = false;
+
+}
+
+document.getElementById("section__botones--atras").addEventListener("click", irAtras);
+document.getElementById("section__botones--siguiente").addEventListener("click", irAdelante);

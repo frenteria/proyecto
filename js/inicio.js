@@ -32,7 +32,7 @@ const usuarios = [
   function validarUsuario(){
     const eval = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     if(eval.test(usuario) == false){
-      mensaje.innerHTML = "No es un usuario valido";
+      mensaje.innerHTML = "Debe ingresar un correo electronico que contenga @ y una direccion por ejemplo '@correo.com'";
     }else{
       return true;
     }
